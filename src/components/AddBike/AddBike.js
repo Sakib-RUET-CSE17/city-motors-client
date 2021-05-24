@@ -55,7 +55,7 @@ const AddBike = () => {
                 handleProgress(100, 'info')
             })
             .catch(function (error) {
-                console.log(error);
+                // console.log(error);
             });
     }
     return (

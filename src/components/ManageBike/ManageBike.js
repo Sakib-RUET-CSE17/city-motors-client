@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import BikeList from '../BikeList/BikeList';
 
 const ManageBike = () => {
-    const [bikes,setBikes]=useState([])
+    const [bikes, setBikes] = useState([])
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -23,7 +23,7 @@ const ManageBike = () => {
             </div>}
             <ul className="list-group">
                 {
-                    bikes.map(bike=><BikeList bike={bike}></BikeList>)
+                    bikes.map(bike => <BikeList bike={bike}></BikeList>)
                 }
             </ul>
         </div>

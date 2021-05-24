@@ -9,14 +9,14 @@ const BikeCart = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/bike/${id}`)
+        fetch(`https://protected-citadel-90750.herokuapp.com/bike/${id}`)
             .then(res => res.json())
             .then(data => setBike(data))
     }, [id])
 
     const handleCheckout = () => {
         const orderDetails = { email: loggedInUser.email, bike: bike, orderTime: new Date() }
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://protected-citadel-90750.herokuapp.com/addOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(orderDetails)

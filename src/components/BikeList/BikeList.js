@@ -8,7 +8,7 @@ const BikeList = ({ bike }) => {
     const [editedPrice, setEditedPrice] = useState(price)
 
     const deleteBike = id => {
-        console.log(id)
+        // console.log(id)
         fetch(`https://protected-citadel-90750.herokuapp.com/deleteBike/${id}`, {
             method: 'DELETE',
         })
@@ -39,7 +39,7 @@ const BikeList = ({ bike }) => {
     }
     return (
         <li id={_id} className="list-group-item">
-            {name} - {cc} CC - BDT {edit ? <input onChange={e => setEditedPrice(parseInt(e.target.value))} type="text" defaultValue={editedPrice}/> : editedPrice}
+            {name} - {cc} CC - BDT {edit ? <input onChange={e => setEditedPrice(parseInt(e.target.value))} type="text" defaultValue={editedPrice} /> : editedPrice}
 
             <button onClick={() => editBike(_id)} className="badge bg-warning rounded">{edit ? <>OK</> : <FontAwesomeIcon icon={faEdit} />}</button>
             <button onClick={() => deleteBike(_id)} className="badge bg-danger rounded"><FontAwesomeIcon icon={faTrashAlt} /></button>

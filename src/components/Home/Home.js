@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import BikeCard from '../BikeCard/BikeCard';
 
 const Home = () => {
-    const [bikes,setBikes]=useState([])
+    const [bikes, setBikes] = useState([])
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const Home = () => {
             </div>}
             <div className="row row-cols-1 row-cols-md-3 g-4">
                 {
-                    bikes.map(bike=><BikeCard bike={bike}></BikeCard>)
+                    bikes.map(bike => <BikeCard bike={bike}></BikeCard>)
                 }
             </div>
         </div>

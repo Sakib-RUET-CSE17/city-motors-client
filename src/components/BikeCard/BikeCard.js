@@ -3,8 +3,8 @@ import { useHistory } from 'react-router';
 
 const BikeCard = ({ bike }) => {
     const { imageURL, name, cc, price } = bike
-    const history=useHistory()
-    
+    const history = useHistory()
+
     const handleBuyNow = id => {
         history.push(`/bikeCart/${id}`)
     }

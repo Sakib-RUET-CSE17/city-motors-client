@@ -20,8 +20,8 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <p>Name: {loggedInUser.displayName}</p>
-      <p>Email: {loggedInUser.email}</p>
+      {/* <p>Name: {loggedInUser.displayName}</p>
+      <p>Email: {loggedInUser.email}</p> */}
       <Router>
         <Header></Header>
         <Switch>
@@ -42,9 +42,6 @@ function App() {
           </PrivateRoute>
           <Route path="/login">
             <Login />
-          </Route>
-          <Route path="/blog">
-            {/* <Blog /> */}
           </Route>
           <Route path="*">
             <NotFound />
